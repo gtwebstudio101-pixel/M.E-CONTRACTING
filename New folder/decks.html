@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <meta name="description" content="M.E. Contracting - Custom decks & decking solutions. PVC, composite, AZEK, IPE, Fiberon, TimberTech, Trex, and Cedar decks in Toronto, GTA.">
+  <title>M.E. Contracting | Decks & Decking – Custom Deck Builders Toronto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #353738;
+      color: #FFFFFF;
+      line-height: 1.5;
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 100%;
+      position: relative;
+    }
+
+    html {
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 100%;
+      scroll-behavior: smooth;
+    }
+
+    /* COMPLETELY HIDE ALL SCROLLBARS */
+    body::-webkit-scrollbar,
+    html::-webkit-scrollbar {
+      display: none;
+    }
+    body, html {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* Typography */
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 4rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #FFFFFF;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-block;
+      background: #D4AF37;
+      color: #353738;
+      font-weight: 600;
+      padding: 14px 36px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: #E8C45A;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      border: 1px solid #D4AF37;
+      color: #D4AF37;
+      font-weight: 500;
+      padding: 12px 32px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 0.85rem;
+    }
+
+    .btn-outline:hover {
+      background: #D4AF37;
+      color: #353738;
+    }
+
+    /* Service Button - One Bar Style */
+    .service-btn {
+      display: inline-block;
+      background: transparent;
+      color: #D4AF37;
+      font-weight: 600;
+      padding: 10px 24px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 1px solid #D4AF37;
+      border-radius: 40px;
+      cursor: pointer;
+      margin-top: 16px;
+      align-self: flex-start;
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+
+    .service-btn:hover {
+      background: #D4AF37;
+      color: #353738;
+      transform: translateX(5px);
+    }
+
+    /* ----- NAVBAR ----- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 24px 0;
+      z-index: 1000;
+      transition: all 0.4s ease;
+      background: transparent;
+    }
+
+    .navbar.scrolled {
+      background: rgba(53, 55, 56, 0.98);
+      backdrop-filter: blur(10px);
+      padding: 16px 0;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .logo {
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .logo-main {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      transition: color 0.3s ease;
+    }
+
+    .navbar.scrolled .logo-main {
+      color: #D4AF37;
+    }
+
+    .logo-sub {
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.7);
+      letter-spacing: 2px;
+      margin-left: 4px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar.scrolled .logo-sub {
+      color: #A0A0A5;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 42px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #FFFFFF;
+      transition: 0.2s;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .navbar.scrolled .nav-links a {
+      color: #FFFFFF;
+    }
+
+    .nav-links a:hover {
+      color: #D4AF37;
+    }
+
+    .nav-links a.active {
+      color: #D4AF37;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #353738;
+      border-radius: 12px;
+      padding: 12px 0;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s;
+      z-index: 1000;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links > li {
+      position: relative;
+    }
+
+    .nav-links > li:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 24px;
+      color: #FFFFFF !important;
+      font-size: 0.85rem;
+    }
+
+    .dropdown-menu a:hover {
+      background: rgba(212, 175, 55, 0.1);
+      color: #D4AF37 !important;
+    }
+
+    .nav-contact {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-phone {
+      text-decoration: none;
+      font-weight: 500;
+      color: #FFFFFF;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-phone i {
+      color: #D4AF37;
+    }
+
+    .navbar.scrolled .nav-phone {
+      color: #FFFFFF;
+    }
+
+    .nav-phone:hover {
+      color: #D4AF37;
+    }
+
+    .btn-nav {
+      background: rgba(212, 175, 55, 0.15);
+      color: #D4AF37;
+      font-weight: 500;
+      padding: 8px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.2s;
+      font-size: 0.8rem;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      cursor: pointer;
+    }
+
+    .navbar.scrolled .btn-nav {
+      background: #D4AF37;
+      color: #353738;
+      border: none;
+    }
+
+    .btn-nav:hover {
+      background: #D4AF37;
+      color: #353738;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 12px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    .menu-toggle i {
+      font-size: 1.2rem;
+      color: #FFFFFF;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 320px;
+      height: 100vh;
+      background: #353738;
+      box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+      z-index: 1001;
+      transition: right 0.4s ease;
+      padding: 100px 32px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .mobile-menu::-webkit-scrollbar {
+      display: none;
+    }
+    .mobile-menu {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    .mobile-menu .close-btn {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #FFFFFF;
+    }
+
+    .mobile-menu a {
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #FFFFFF;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-menu .mobile-dropdown {
+      margin-left: 16px;
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-menu .mobile-dropdown a {
+      font-size: 0.9rem;
+      border-bottom: none;
+      color: #A0A0A5;
+    }
+
+    .mobile-contact {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-contact a {
+      display: block;
+      margin-bottom: 16px;
+      border-bottom: none;
+    }
+
+    .mobile-btn {
+      background: #D4AF37;
+      color: #353738;
+      text-align: center;
+      padding: 12px;
+      border-radius: 40px;
+      margin-top: 10px;
+    }
+
+    /* Page Hero with Text Reveal Animation */
+    .page-hero {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 160px 24px;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://raw.githubusercontent.com/Tharindumal/M.E.-CONTRACTING/45ce9512cd8f8168bd62086e3f48b52ad47968fe/images/18/Toronto-Landscape-Design-Patio-Design-Project-Featuring-Composite-Decking-Wrought-Iron-Glass-Railings-Outdoor-Fireplace-Interlocking.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(53, 55, 56, 0.6);
+      z-index: 0;
+    }
+
+    .page-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Text Reveal Animation */
+    .reveal-text {
+      color: #FFFFFF;
+      font-size: 5.5rem;
+      font-weight: 800;
+      margin-bottom: 0;
+      text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+      line-height: 1.2;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: revealText 1s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+    }
+
+    @keyframes revealText {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal-btn {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: revealBtn 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1) 0.3s forwards;
+    }
+
+    @keyframes revealBtn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Typewriter Effect Section */
+    .experience-section {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .typewriter-container {
+      display: inline-block;
+    }
+
+    .typewriter-text {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.3;
+      overflow: hidden;
+      white-space: normal;
+      display: inline-block;
+    }
+
+    /* Intro Section */
+    .intro-section {
+      padding: 100px 0;
+      background: #353738;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .intro-image img {
+      width: 100%;
+      border-radius: 28px;
+      object-fit: cover;
+      box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .intro-content h2 { color: #FFFFFF; }
+    .intro-content p { color: #A0A0A5; margin-bottom: 20px; line-height: 1.6; font-size: 1rem; }
+
+    /* Service Types */
+    .service-types-section {
+      padding: 80px 0;
+      background: #353738;
+    }
+
+    .service-types-wrapper {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .service-types-grid {
+      display: flex;
+      gap: 32px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 4px 0 16px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .service-types-grid::-webkit-scrollbar {
+      display: none;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+      width: calc(33.333% - 22px);
+      min-width: 340px;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+      transform: none;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(212, 175, 55, 0.5);
+      background: rgba(40, 45, 65, 0.5);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-card:hover img { transform: scale(1.03); }
+
+    .service-content {
+      padding: 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-content h3 { font-size: 1.5rem; margin-bottom: 12px; color: #D4AF37; }
+    .service-content p { color: #A0A0A5; margin-bottom: 12px; line-height: 1.6; font-size: 0.9rem; }
+    .service-content p strong { color: #FFFFFF; }
+
+    /* Scroll Dots - SHOW ON BOTH MOBILE AND PC */
+    .scroll-dots {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+      padding: 12px 0;
+    }
+
+    .scroll-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #A0A0A5;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .scroll-dot.active {
+      width: 24px;
+      border-radius: 4px;
+      background: #D4AF37;
+    }
+
+    /* Trust Section */
+    .trust-section {
+      padding: 100px 0;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .trust-image img {
+      width: 100%;
+      border-radius: 28px;
+      object-fit: cover;
+      box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .trust-content h2 { color: #FFFFFF; }
+    .trust-content p { color: #A0A0A5; margin-bottom: 20px; line-height: 1.6; }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 100px 0;
+      background: #353738;
+    }
+
+    .faq-section h2 { text-align: center; color: #FFFFFF; }
+
+    .faq-subhead {
+      text-align: center;
+      color: #A0A0A5;
+      margin-bottom: 48px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+    }
+
+    .faq-item {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 32px;
+      border-radius: 24px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover { transform: translateY(-3px); border-color: rgba(212, 175, 55, 0.5); }
+    .faq-item h3 { font-size: 1.3rem; margin-bottom: 16px; color: #D4AF37; }
+    .faq-item p { color: #A0A0A5; line-height: 1.6; }
+
+    /* CTA Section */
+    .hero-cta-section {
+      background: #2A2C2D;
+      padding: 100px 0;
+      text-align: center;
+      border-top: 1px solid rgba(212, 175, 55, 0.3);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .hero-cta-section h2 { color: #FFFFFF; margin-bottom: 1rem; }
+    .hero-cta-section p { max-width: 550px; margin: 0 auto 2rem; color: #A0A0A5; }
+
+    .hero-cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero-cta {
+      display: inline-block;
+      background: #D4AF37;
+      color: #353738;
+      font-weight: 600;
+      padding: 14px 36px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .btn-hero-cta:hover { background: #E8C45A; transform: translateY(-2px); }
+
+    .btn-hero-outline {
+      display: inline-block;
+      background: transparent;
+      border: 1px solid #D4AF37;
+      color: #D4AF37;
+      font-weight: 500;
+      padding: 12px 32px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 0.85rem;
+    }
+
+    .btn-hero-outline:hover { background: #D4AF37; color: #353738; }
+
+    /* Footer */
+    .footer {
+      background: #353738;
+      padding: 60px 0 32px;
+      text-align: center;
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 48px;
+      margin-bottom: 48px;
+      text-align: left;
+    }
+
+    .footer-col h4 { color: #D4AF37; margin-bottom: 24px; font-size: 1.1rem; font-weight: 600; }
+    .footer-col ul { list-style: none; padding: 0; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul li a { color: #A0A0A5; text-decoration: none; transition: color 0.2s ease; font-size: 0.85rem; }
+    .footer-col ul li a:hover { color: #D4AF37; }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #D4AF37;
+      margin-bottom: 8px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .footer-tagline { font-size: 0.7rem; color: #A0A0A5; margin-bottom: 24px; }
+    .footer-contact p { margin-bottom: 12px; font-size: 0.85rem; color: #A0A0A5; }
+    .footer-contact i { width: 24px; margin-right: 8px; color: #D4AF37; }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 32px;
+      font-size: 0.7rem;
+      color: #666670;
+    }
+
+    /* Fade In Animation */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container, .nav-container, .footer-container { padding: 0 20px; }
+      .reveal-text { font-size: 3.8rem; }
+      .typewriter-text { font-size: 1.6rem; }
+      h2 { font-size: 1.8rem; }
+      .menu-toggle { display: flex; }
+      .nav-links { display: none; }
+      .nav-contact { display: none; }
+      .intro-grid, .trust-grid { grid-template-columns: 1fr; gap: 40px; }
+      .service-types-grid .service-card { width: 85%; min-width: 280px; }
+      .service-card img { height: 220px; }
+      .service-content { padding: 20px; }
+      .service-content h3 { font-size: 1.4rem; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .hero-cta-buttons { flex-direction: column; align-items: center; }
+    }
+
+    @media (max-width: 480px) {
+      .reveal-text { font-size: 2.8rem; }
+      .typewriter-text { font-size: 1.3rem; }
+      .experience-section h2 { font-size: 1.5rem; }
+      .service-types-grid .service-card { width: 90%; min-width: 260px; }
+      .service-card img { height: 200px; }
+      .service-content { padding: 16px; }
+      .service-content h3 { font-size: 1.3rem; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="reveal-text">Custom Decks & Decking Solutions</h1>
+        <a href="contact-us.html" class="btn-primary hero-cta-btn reveal-btn" style="margin-top: 32px; display: inline-block;">Schedule a Consultation</a>
+      </div>
+    </section>
+
+    <section class="intro-section fade-in-up">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-image">
+            <img src="https://raw.githubusercontent.com/Tharindumal/M.E.-CONTRACTING/05d65b3dfc6d9beba60a250f1846c03dac3c60b4/images/decks/M.E.-Contracting-Decking-and-Glass-Aluminum-Railing-Installation-Project-with-Fiberglass-Pool.jpg" alt="Custom deck" loading="lazy">
+          </div>
+          <div class="intro-content">
+            <h2>Transform Your Backyard with a Custom Deck</h2>
+            <p>Your deck is more than just an outdoor structure—it's an extension of your home, a place for family gatherings, summer barbecues, and peaceful morning coffee. At M.E. Contracting, we specialize in creating custom decks that blend beauty, functionality, and durability.</p>
+            <p>From traditional wood decks to low-maintenance composite materials, we work with you to design and build the perfect outdoor space that complements your home and lifestyle. Our expert carpenters bring decades of experience to every project.</p>
+            <p>Let us help you create the outdoor living space you've always dreamed of—a place where memories are made and quality craftsmanship stands the test of time.</p>
+            <a href="contact-us.html" class="btn-primary services-cta" style="margin-top:16px;display:inline-block;">Schedule a Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience-section fade-in-up">
+      <div class="container">
+        <div class="typewriter-container">
+          <div class="typewriter-text" id="typewriterText"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-types-section">
+      <div class="container">
+        <div class="service-types-wrapper">
+          <div class="service-types-grid" id="deckScrollContainer">
+            <!-- PVC Deck Card -->
+            <div class="service-card">
+              <img src="https://raw.githubusercontent.com/Tharindumal/M.E.-CONTRACTING/05d65b3dfc6d9beba60a250f1846c03dac3c60b4/images/decks/Complete-Toronto-PVC-Decking-Project-M.E.-Contracting.jpg" alt="PVC Decking" loading="lazy">
+              <div class="service-content">
+                <h3>PVC Deck</h3>
+                <p><strong>Toronto PVC Deck Builder</strong><br>PVC has no organic materials, meaning it will not absorb water, therefore it will not mold, warp, or rot like wood.</p>
+                <p><strong>Benefits:</strong> Mold Free, Scratch Resistant, Water Proof, Recycled Materials, Light weight.</p>
+                <a href="contact-us.html" class="service-btn service-pvc-btn">Learn More</a>
+              </div>
+            </div>
+            <!-- AZEK Deck Card -->
+            <div class="service-card">
+              <img src="https://raw.githubusercontent.com/Tharindumal/M.E.-CONTRACTING/67117aaf6987bb192c073e45a679c3a0915ec0ad/images/decks/2.jpg" alt="AZEK Decking" loading="lazy">
+              <div class="service-content">
+                <h3>AZEK Deck</h3>
+                <p><strong>Toronto Azek Deck Builder</strong><br>AZEK decking is a uniquely durable and attractive composite material with special advantages: Mold-resistance, Stain resistance, Moisture resistance, Insect resistance.</p>
+                <p>Available colors: White, Tahoe, Sedona, Clay, Brownstone, Kona, Fawn, Slate Gray, Acacia, and more.</p>
+                <a href="contact-us.html" class="service-btn service-azek-btn">Learn More</a>
+              </div>
+            </div>
+            <!-- Composite Deck Card -->
+            <div class="service-card">
+              <img src="https://raw.githubusercontent.com/Tharindumal/M.E.-CONTRACTING/67117aaf6987bb192c073e45a679c3a0915ec0ad/images/decks/3.jpg" alt="Composite Decking" loading="lazy">
+              <div class="service-content">
+                <h3>Composite Deck</h3>
+                <p><strong>Toronto Composite Deck Builder</strong><br>Composite decking is composed of wood fiber and plastic, creating planks that secure a sturdy deck with low maintenance.</p>
+                <p><strong>Benefits:</strong> No cracking, No insects, Water Proof, No separation, No staining. Lasts 25+ years.</p>
+                <a href="contact-us.html" class="service-btn service-composite-btn">Learn More</a>
+              </div>
+            </div>
+            <!-- IPE Deck Card -->
+            <div class="service-card">
+              <img src="https://raw.githubusercontent.com/Tharindumal/M.E.-CONTRACTING/67117aaf6987bb192c073e45a679c3a0915ec0ad/images/decks/4.jpg" alt="IPE Decking" loading="lazy">
+              <div class="service-content">
+                <h3>IPE Deck</h3>
+                <p><strong>WE TRANSFORM BACKYARDS</strong><br>IPE provides unmatched beauty while being one of the most durable building materials. Incredibly Durable, Naturally Insect Resistant, Highly Attractive.</p>
+                <p>IPE wood is one of the hardest, most dense woods available—it doesn't even float in water.</p>
+                <a href="contact-us.html" class="service-btn service-ipe-btn">Learn More</a>
+              </div>
+            </div>
+            <!-- Fiberon Deck Card -->
+            <div class="service-card">
+              <img src="https://raw.githubusercontent.com/Tharindumal/M.E.-CONTRACTING/67117aaf6987bb192c073e45a679c3a0915ec0ad/images/decks/5%20(2).jpg" alt="Fiberon Decking" loading="lazy">
+              <div class="service-content">
+                <h3>Fiberon Deck</h3>
+                <p><strong>Toronto Fiberon Deck Builder</strong><br>Fiberon composite decking gives you the look you want while providing a long-lasting product with low maintenance.</p>
+                <p><strong>Benefits:</strong> Colors Option, Choices in styles, Sustainable products, Low maintenance, Stain and fade warranty. Lasts 25+ years.</p>
+                <a href="contact-us.html" class="service-btn service-fiberon-btn">Learn More</a>
+              </div>
+            </div>
+            <!-- TimberTech Deck Card -->
+            <div class="service-card">
+              <img src="https://raw.githubusercontent.com/Tharindumal/M.E.-CONTRACTING/05d65b3dfc6d9beba60a250f1846c03dac3c60b4/images/decks/Complete-Toronto-PVC-Decking-Project-M.E.-Contracting.jpg" alt="TimberTech Decking" loading="lazy">
+              <div class="service-content">
+                <h3>TimberTech Deck</h3>
+                <p><strong>WE TRANSFORM BACKYARDS</strong><br>TimberTech decking solutions provide a vast array of options. All products come with a 25-year warranty.</p>
+                <p><strong>Types:</strong> Wood-plastic composite, Capped composite, PVC planking. Increases home value and durability.</p>
+                <a href="contact-us.html" class="service-btn service-timbertech-btn">Learn More</a>
+              </div>
+            </div>
+            <!-- Trex Deck Card -->
+            <div class="service-card">
+              <img src="https://raw.githubusercontent.com/Tharindumal/M.E.-CONTRACTING/05d65b3dfc6d9beba60a250f1846c03dac3c60b4/images/decks/4glenayr.jpg" alt="Trex Decking" loading="lazy">
+              <div class="service-content">
+                <h3>Trex Deck</h3>
+                <p><strong>Toronto Trex Deck Builder</strong><br>TREX decking offers beauty of hardwood with functionality and low maintenance. Durable, Low Up-Keep, Fire Resistant.</p>
+                <p>Will not warp, rot, or resist termites. The initial cost is greater but long-term savings make up for it.</p>
+                <a href="contact-us.html" class="service-btn service-trex-btn">Learn More</a>
+              </div>
+            </div>
+            <!-- Cedar Deck Card -->
+            <div class="service-card">
+              <img src="https://raw.githubusercontent.com/Tharindumal/M.E.-CONTRACTING/05d65b3dfc6d9beba60a250f1846c03dac3c60b4/images/decks/16Walker-Ave.jpg" alt="Cedar Decking" loading="lazy">
+              <div class="service-content">
+                <h3>Cedar Deck</h3>
+                <p><strong>Toronto Cedar Deck Builder</strong><br>Western Red Cedar is prized for its amazing color and grain. Stainable, water-resistant, naturally rot and insect resistant.</p>
+                <p>Rich color variations, natural sound-dampening qualities, lasts 15-20 years with proper care.</p>
+                <a href="contact-us.html" class="service-btn service-cedar-btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="scroll-dots" id="deckDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-section fade-in-up">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-image">
+            <img src="https://raw.githubusercontent.com/Tharindumal/M.E.-CONTRACTING/05d65b3dfc6d9beba60a250f1846c03dac3c60b4/images/decks/Chine-Drive-Backyard-Landscaping-Project-with-Small-Composite-Deck-Build-Aluminum-Tempered-Glass-Railings.jpg" alt="Award winning deck construction" loading="lazy">
+          </div>
+          <div class="trust-content">
+            <h2>AWARD WINNING DECK CONSTRUCTION & DESIGN</h2>
+            <p>M.E. Contracting is widely recognized as one of the GTA's premier deck builders and outdoor living specialists. Our award-winning craftsmanship and attention to detail set us apart.</p>
+            <p>With over 15+ years of excellence serving Toronto and the Greater Toronto Area, our approach is creative, client-focused, and detail-oriented. Our team of expert carpenters and designers makes this possible with years of experience in deck construction, from simple platforms to complex multi-level structures.</p>
+            <p>We understand that the key to a great deck project is all about the experience, and <strong>we're passionate about making your experience exceptional from start to finish.</strong></p>
+            <a href="contact-us.html" class="btn-primary services-cta" style="margin-top:16px;display:inline-block;">Schedule a Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section fade-in-up">
+      <div class="container">
+        <h2>DECK BUILDING FAQS</h2>
+        <p class="faq-subhead">Got questions about deck design & construction? We invite you to call and speak to a staff member. Meanwhile, we've put together a few answers to some of our commonly asked questions below.</p>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>How long does a deck last?</h3>
+            <p>The lifespan of your deck depends on the materials used and how well it's maintained. Pressure-treated wood decks typically last 15-20 years with proper care. Composite decks can last 25-30 years with minimal maintenance. At M.E. Contracting, we use only premium materials and proven construction techniques to maximize the longevity of your deck.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How long does deck construction take?</h3>
+            <p>The timeline for deck construction varies based on size, complexity, and permitting requirements. A standard deck typically takes 1-3 weeks from start to finish. This includes design, permitting, material selection, site preparation, construction, and final finishing. We provide detailed timelines during your consultation.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Which decking material is best for me?</h3>
+            <p>The choice depends on your priorities. Wood (cedar) offers natural beauty and lower initial cost but requires regular maintenance. Composite offers superior durability and low maintenance. PVC is waterproof and mold-free. IPE is incredibly durable but more expensive. Our team can help you evaluate the best option for your lifestyle, budget, and aesthetic preferences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-cta-section fade-in-up">
+      <div class="container">
+        <h2>Ready to Build Your Dream Deck?</h2>
+        <p>Schedule a consultation with our deck building experts today.</p>
+        <div class="hero-cta-buttons">
+          <a href="contact-us.html" class="btn-hero-cta final-cta-btn">Schedule a Consultation</a>
+          <a href="portfolio.html" class="btn-hero-outline">View Our Portfolio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    const typewriterText = "At M.E. Contracting, We Make Your Deck-Building Experience as Exceptional as the Results!";
+    const typewriterElement = document.getElementById('typewriterText');
+    let i = 0;
+    
+    function typeWriter() {
+      if (i < typewriterText.length) {
+        typewriterElement.innerHTML += typewriterText.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      }
+    }
+    
+    const typewriterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && typewriterElement && typewriterElement.innerHTML === '') {
+          typeWriter();
+          typewriterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    const experienceSection = document.querySelector('.experience-section');
+    if (experienceSection) typewriterObserver.observe(experienceSection);
+
+    async function loadComponent(componentName, placeholderId) {
+      try {
+        const response = await fetch(`${componentName}.html`);
+        if (response.ok) document.getElementById(placeholderId).innerHTML = await response.text();
+      } catch (error) {}
+    }
+
+    Promise.all([
+      loadComponent('header', 'header-placeholder'),
+      loadComponent('footer', 'footer-placeholder')
+    ]).then(() => {
+      const navbar = document.getElementById('navbar');
+      if (navbar) window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const closeMenu = document.getElementById('closeMenu');
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => mobileMenu.classList.add('active'));
+        if (closeMenu) closeMenu.addEventListener('click', () => mobileMenu.classList.remove('active'));
+      }
+
+      const logoLink = document.getElementById('logoLink');
+      if (logoLink) logoLink.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'index.html'; });
+    });
+
+    const fadeElements = document.querySelectorAll('.fade-in-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    fadeElements.forEach(el => observer.observe(el));
+
+    // Scroll dots for deck cards - WORKS ON BOTH MOBILE AND PC
+    const deckContainer = document.getElementById('deckScrollContainer');
+    const deckDotsContainer = document.getElementById('deckDots');
+    if (deckContainer && deckDotsContainer) {
+      const items = deckContainer.querySelectorAll('.service-card');
+      deckDotsContainer.innerHTML = '';
+      
+      if (items.length > 1) {
+        items.forEach((_, i) => {
+          const dot = document.createElement('div');
+          dot.classList.add('scroll-dot');
+          if (i === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => {
+            deckContainer.scrollTo({ left: items[i].offsetLeft - 24, behavior: 'smooth' });
+          });
+          deckDotsContainer.appendChild(dot);
+        });
+        
+        const updateDots = () => {
+          const scrollPos = deckContainer.scrollLeft;
+          let activeIndex = 0;
+          for (let i = 0; i < items.length; i++) {
+            if (scrollPos + deckContainer.offsetWidth / 2 >= items[i].offsetLeft) activeIndex = i;
+          }
+          deckDotsContainer.querySelectorAll('.scroll-dot').forEach((dot, idx) => {
+            idx === activeIndex ? dot.classList.add('active') : dot.classList.remove('active');
+          });
+        };
+        
+        deckContainer.addEventListener('scroll', () => requestAnimationFrame(updateDots));
+        updateDots();
+      } else {
+        deckDotsContainer.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

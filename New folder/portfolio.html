@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="M.E. Contracting Portfolio - Award-winning luxury landscaping, interlocking, deck & pool design projects in Toronto.">
+  <title>M.E. Contracting | Transformations Gallery – Luxury Outdoor Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #353738;
+      color: #FFFFFF;
+      line-height: 1.5;
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 100%;
+      position: relative;
+    }
+
+    html {
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 100%;
+      scroll-behavior: smooth;
+    }
+
+    /* COMPLETELY HIDE ALL SCROLLBARS */
+    body::-webkit-scrollbar,
+    html::-webkit-scrollbar {
+      display: none;
+    }
+    body, html {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* Typography */
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 4rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #FFFFFF;
+    }
+
+    .section-subhead {
+      font-size: 1rem;
+      color: #A0A0A5;
+      max-width: 600px;
+      margin: 0.5rem auto 2rem auto;
+      text-align: center;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-block;
+      background: #D4AF37;
+      color: #353738;
+      font-weight: 600;
+      padding: 14px 36px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: #E8C45A;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      border: 1px solid #D4AF37;
+      color: #D4AF37;
+      font-weight: 500;
+      padding: 12px 32px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 0.85rem;
+    }
+
+    .btn-outline:hover {
+      background: #D4AF37;
+      color: #353738;
+    }
+
+    /* View Project Button - One Bar Style */
+    .btn-outline-small {
+      display: inline-block;
+      background: transparent;
+      border: 1px solid #D4AF37;
+      color: #D4AF37;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 0.75rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-outline-small:hover {
+      background: #D4AF37;
+      color: #353738;
+    }
+
+    /* ----- NAVBAR ----- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 24px 0;
+      z-index: 1000;
+      transition: all 0.4s ease;
+      background: transparent;
+    }
+
+    .navbar.scrolled {
+      background: rgba(53, 55, 56, 0.98);
+      backdrop-filter: blur(10px);
+      padding: 16px 0;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .logo {
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .logo-main {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      transition: color 0.3s ease;
+    }
+
+    .navbar.scrolled .logo-main {
+      color: #D4AF37;
+    }
+
+    .logo-sub {
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.7);
+      letter-spacing: 2px;
+      margin-left: 4px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar.scrolled .logo-sub {
+      color: #A0A0A5;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 42px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #FFFFFF;
+      transition: 0.2s;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .navbar.scrolled .nav-links a {
+      color: #FFFFFF;
+    }
+
+    .nav-links a:hover {
+      color: #D4AF37;
+    }
+
+    .nav-links a.active {
+      color: #D4AF37;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #353738;
+      border-radius: 12px;
+      padding: 12px 0;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s;
+      z-index: 1000;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links > li {
+      position: relative;
+    }
+
+    .nav-links > li:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 24px;
+      color: #FFFFFF !important;
+      font-size: 0.85rem;
+    }
+
+    .dropdown-menu a:hover {
+      background: rgba(212, 175, 55, 0.1);
+      color: #D4AF37 !important;
+    }
+
+    .nav-contact {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-phone {
+      text-decoration: none;
+      font-weight: 500;
+      color: #FFFFFF;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-phone i {
+      color: #D4AF37;
+    }
+
+    .navbar.scrolled .nav-phone {
+      color: #FFFFFF;
+    }
+
+    .nav-phone:hover {
+      color: #D4AF37;
+    }
+
+    .btn-nav {
+      background: rgba(212, 175, 55, 0.15);
+      color: #D4AF37;
+      font-weight: 500;
+      padding: 8px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.2s;
+      font-size: 0.8rem;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      cursor: pointer;
+    }
+
+    .navbar.scrolled .btn-nav {
+      background: #D4AF37;
+      color: #353738;
+      border: none;
+    }
+
+    .btn-nav:hover {
+      background: #D4AF37;
+      color: #353738;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 12px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    .menu-toggle i {
+      font-size: 1.2rem;
+      color: #FFFFFF;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 320px;
+      height: 100vh;
+      background: #353738;
+      box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+      z-index: 1001;
+      transition: right 0.4s ease;
+      padding: 100px 32px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .mobile-menu::-webkit-scrollbar {
+      display: none;
+    }
+    .mobile-menu {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    .mobile-menu .close-btn {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #FFFFFF;
+    }
+
+    .mobile-menu a {
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #FFFFFF;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-menu .mobile-dropdown {
+      margin-left: 16px;
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-menu .mobile-dropdown a {
+      font-size: 0.9rem;
+      border-bottom: none;
+      color: #A0A0A5;
+    }
+
+    .mobile-contact {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-contact a {
+      display: block;
+      margin-bottom: 16px;
+      border-bottom: none;
+    }
+
+    .mobile-btn {
+      background: #D4AF37;
+      color: #353738;
+      text-align: center;
+      padding: 12px;
+      border-radius: 40px;
+      margin-top: 10px;
+    }
+
+    /* Page Hero with Text Reveal Animation */
+    .page-hero {
+      position: relative;
+      width: 100%;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 160px 24px 100px;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://raw.githubusercontent.com/Tharindumal/M.E.-CONTRACTING/45ce9512cd8f8168bd62086e3f48b52ad47968fe/images/p9/M.E.-Contracting-Modern-Backyard-Landscaping-Project-Featuring-Outdoor-Fireplace-Stone-Interlocking-And-Woodworking.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(53, 55, 56, 0.65);
+      z-index: 0;
+    }
+
+    .page-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Text Reveal Animation - MUCH LARGER FONT */
+    .reveal-text {
+      color: #FFFFFF;
+      font-size: 5.5rem;
+      font-weight: 800;
+      margin-bottom: 0;
+      text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+      line-height: 1.2;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: revealText 1s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+    }
+
+    @keyframes revealText {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Button Reveal Animation */
+    .reveal-btn {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: revealBtn 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1) 0.3s forwards;
+    }
+
+    @keyframes revealBtn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Portfolio Filter */
+    .portfolio-filter {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 10px 28px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #FFFFFF;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: #D4AF37;
+      border-color: #D4AF37;
+      color: #353738;
+    }
+
+    /* Portfolio Grid - NO SCROLL ANIMATIONS */
+    .portfolio-grid-section {
+      padding: 80px 0;
+      background: #353738;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 32px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      transition: all 0.3s ease;
+      /* NO SCROLL ANIMATION - always visible */
+      opacity: 1;
+      transform: none;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-8px);
+      border-color: rgba(212, 175, 55, 0.6);
+      background: rgba(40, 45, 65, 0.5);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.03);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(53, 55, 56, 0.95), transparent);
+      padding: 24px;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+
+    .portfolio-item:hover .portfolio-overlay {
+      transform: translateY(0);
+    }
+
+    .portfolio-overlay h3 {
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+      color: #FFFFFF;
+    }
+
+    .portfolio-overlay p {
+      font-size: 0.8rem;
+      margin-bottom: 12px;
+      color: #A0A0A5;
+    }
+
+    /* Lightbox Modal Styles */
+    .lightbox-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 10001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-y: auto;
+      padding: 40px;
+    }
+
+    .lightbox-content {
+      background: #353738;
+      border-radius: 28px;
+      max-width: 95%;
+      width: 1200px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 24px;
+      border: 1px solid #D4AF37;
+    }
+
+    .lightbox-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .lightbox-header h3 {
+      color: #D4AF37;
+      font-size: 1.5rem;
+    }
+
+    .lightbox-close {
+      background: #D4AF37;
+      color: #353738;
+      border: none;
+      font-size: 1rem;
+      padding: 8px 20px;
+      border-radius: 40px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .lightbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 16px;
+    }
+
+    .lightbox-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .lightbox-grid img:hover {
+      transform: scale(1.02);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: #2A2C2D;
+      padding: 80px 0;
+      text-align: center;
+      border-top: 1px solid rgba(212, 175, 55, 0.3);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .cta-section h2 {
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      max-width: 550px;
+      margin: 0 auto 2rem;
+      color: #A0A0A5;
+    }
+
+    .cta-section .btn-primary {
+      background: #D4AF37;
+      color: #353738;
+    }
+
+    /* Footer */
+    .footer {
+      background: #353738;
+      padding: 60px 0 32px;
+      text-align: center;
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 48px;
+      margin-bottom: 48px;
+      text-align: left;
+    }
+
+    .footer-col h4 {
+      color: #D4AF37;
+      margin-bottom: 24px;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col ul li a {
+      color: #A0A0A5;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      font-size: 0.85rem;
+    }
+
+    .footer-col ul li a:hover {
+      color: #D4AF37;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #D4AF37;
+      margin-bottom: 8px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .footer-tagline {
+      font-size: 0.7rem;
+      color: #A0A0A5;
+      margin-bottom: 24px;
+    }
+
+    .footer-contact p {
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+      color: #A0A0A5;
+    }
+
+    .footer-contact i {
+      width: 24px;
+      margin-right: 8px;
+      color: #D4AF37;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 32px;
+      font-size: 0.7rem;
+      color: #666670;
+    }
+
+    /* Fade In Animation - only for intro sections */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container, .nav-container, .footer-container {
+        padding: 0 20px;
+      }
+      
+      .reveal-text {
+        font-size: 3.8rem;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      .menu-toggle {
+        display: flex;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .nav-contact {
+        display: none;
+      }
+      
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      
+      .lightbox-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+      
+      .lightbox-grid img {
+        height: 150px;
+      }
+      
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .reveal-text {
+        font-size: 2.8rem;
+      }
+      
+      .portfolio-item img {
+        height: 240px;
+      }
+      
+      .filter-btn {
+        padding: 6px 16px;
+        font-size: 0.75rem;
+      }
+      
+      .lightbox-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .lightbox-grid img {
+        height: 200px;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main>
+    <!-- Page Hero with Text Reveal Animation -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="reveal-text">Transformations Gallery</h1>
+        <a href="contact-us.html" class="btn-primary hero-cta-btn reveal-btn" style="margin-top: 32px; display: inline-block;">Schedule a Consultation</a>
+      </div>
+    </section>
+
+    <section class="portfolio-grid-section">
+      <div class="container">
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="landscaping">Landscaping</button>
+          <button class="filter-btn" data-filter="decking">Decking & Railings</button>
+          <button class="filter-btn" data-filter="pools">Pools & Spas</button>
+          <button class="filter-btn" data-filter="hardscaping">Interlocking & Patios</button>
+          <button class="filter-btn" data-filter="woodworking">Woodworking</button>
+        </div>
+        <div class="portfolio-grid" id="portfolioGrid"></div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Create Your Dream Outdoor Space?</h2>
+        <p>Let's bring your vision to life with award-winning craftsmanship</p>
+        <a href="contact-us.html" class="btn-primary portfolio-cta">Schedule a Consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // Predefined image lists for each folder - UPDATED WITH NEW COMMIT HASH
+    const BASE_RAW = "https://raw.githubusercontent.com/Tharindumal/M.E.-CONTRACTING/45ce9512cd8f8168bd62086e3f48b52ad47968fe/images/";
+
+    const folderImages = {
+      "p1": ["11Walker-Ave.jpg","12Walker-Ave.jpg","13Walker-Ave.jpg","16Walker-Ave.jpg","2Walker-Ave.jpg","3Walker-Ave.jpg","4Walker-Ave.jpg","5Walker-Ave.jpg","6Walker-Ave.jpg","7Walker-Ave.jpg"],
+      "p2": ["11glenayr.jpg","16glenayr.jpg","18glenayr.jpg","1glenayr.jpg","2glenayr.jpg","4glenayr.jpg","5glenayr.jpg","7glenayr.jpg","8glenayr.jpg","9glenayr.jpg"],
+      "p3": ["10baycrest1.jpg","11baycrest1.jpg","12baycrest1.jpg","1baycrest1.jpg","2baycrest1.jpg","3baycrest1.jpg","4baycrest1.jpg","5baycrest1.jpg","6baycrest1.jpg","7baycrest1.jpg","8baycrest1.jpg","9baycrest1.jpg"],
+      "p4": ["109Ramsey-Project-2024.jpg","23Ramsey-Project-2024.jpg","2Ramsey-Project-2024.jpg","34Ramsey-Project-2024.jpg","43Ramsey-Project-2024.jpg","4Ramsey-Project-2024.jpg","5Ramsey-Project-2024.jpg","6Ramsey-Project-2024.jpg","80Ramsey-Project-2024.jpg","81Ramsey-Project-2024.jpg"],
+      "p5": ["12Oxford-project.jpg","1Oxford-project.jpg","2Oxford-project.jpg","4Oxford-project.jpg","6Oxford-project.jpg","9Oxford-project.jpg"],
+      "p6": ["10Rathburn-Road-Project-2024.jpg","1Rathburn-Road-Project-2024.jpg","2Rathburn-Road-Project-2024.jpg","3Rathburn-Road-Project-2024.jpg","4Rathburn-Road-Project-2024.jpg","5Rathburn-Road-Project-2024.jpg","6Rathburn-Road-Project-2024.jpg","7Rathburn-Road-Project-2024.jpg","8Rathburn-Road-Project-2024.jpg","9Rathburn-Road-Project-2024.jpg"],
+      "p7": ["Backyard-Fiberglass-Pool-Installation-Decking-Stone-Interlocking-and-Landscape-Design-Project-by-M.E.-Contracting.jpg","Backyard-Landscape-Design-Project-Featuring-Swim-Spa-PVC-Deck-Fiberglass-Pool-Installation-and-Interlocking.jpg","Complete-Backyard-Landscape-Design-Decking-Fiberglass-Pool-Installation-Project-by-M.E.-Contracting.jpg","M.E.-Contracting-Decking-and-Glass-Aluminum-Railing-Installation-Project-with-Fiberglass-Pool.jpg","M.E.-Contracting-Landscape-Design-Decking-Pool-Installation-with-Swim-Spa-Project.jpg","M.E.-Contracting-Lower-Deck-Build-on-Complete-Landscape-Design-Fiberglass-Pool-Installation.jpg","M.E.-Contracting-New-Decking-Landscape-Design-Project-with-Glass-and-Aluminum-Railings.jpg","M.E.-Contracting-PVC-Decking-Project-Featuring-Glass-and-Aluminum-Railings-and-Fiberglass-Pool.jpg","New-Decking-Fiberglass-Pool-Installation-Project-by-M.E.-Contracting.jpg","Professional-Fiberglass-Pool-Installation-Stone-Interlocking-and-Landscape-Design-by-M.E.-Contracting.jpg"],
+      "p8": ["M.E.-Contracting-Toronto-Landscape-Design-and-Construction-Project-Featuring-Outdoor-Kitchen-and-PVC-Decking.jpg","M.E.-Contracting-Toronto-Landscape-Design-and-Construction-Project-Featuring-Stone-Interlocking-Woodworking-Cabana-with-Outdoor-Lighting-and-Pool-Installation-with-Swim-Spa-and-Water-Fea.jpg","M.E.-Contracting-Toronto-Landscape-Design-and-Pool-Installation-Project-Featuring-Water-Feature-and-Stone-Interlocking.jpg","M.E.-Contracting-Toronto-Landscape-Design-and-Pool-Installation-Project-with-Swim-Spa-and-Water-Feature-Stone-Interlocking-PVC-Decking-Outdoor-Lighting-Outdoor-Kitchen-and-Metal-Pergola.jpg","Toronto-Landscape-Design-and-Construction-Project-Featuring-Outdoor-Lighting-Pool-with-Swim-Spa-and-Water-Feature-Installation-Stone-Interlocking-Outdoor-Fireplace-and-Woodworking-Cabana.jpg","Toronto-Landscape-Design-and-Construction-Project-by-M.E.-Contracting-Featuring-Pool-Installation-with-Water-Feature-Outdoor-Lighting-and-Stone-Interlocking.jpg","Toronto-Landscape-Design-and-Construction-Project-by-M.E.-Contracting-Featuring-Stone-Interlocking-Patio-Swim-Spa-and-Pool-Installation-PVC-Decking-with-Outdoor-Lighting-and-Aluminum-Rai.jpg","Toronto-Landscape-Design-and-Construction-Project-by-M.E.-Contracting-Featuring-Woodworking-Cabana-with-Outdoor-Lighting-Patio-Interlocking-and-Pool-Installation.jpg"],
+      "p9": ["Complete-Landscape-Patio-Design-Project-By-M.E.-Contracting-Featuring-Flush-Stone-Interlocking-Around-Pool-Woodworking-Pergola-Outdoor-Fireplace-Fiberglass-Pool-Installation-with-Swim-Sp.jpg","Completed-Small-Backyard-Modern-Landscape-Design-Project-Featuring-Patio-Design-Stone-Interlocking-Woodworking-Pergola-Fiberglass-Pool-Installation-with-MIni-Swim-Spa-And-Outdoor-Firepla.jpg","M.E.-Contracting-Completed-Backyard-Landscape-Design-Project-Featuring-Fiberglass-Pool-with-Swim-Spa-Stone-Interlocking-Woodworking-Pergola-And-An-Outdoor-Fireplace.jpg","M.E.-Contracting-Modern-Backyard-Landscaping-Project-Featuring-Outdoor-Fireplace-Stone-Interlocking-And-Woodworking.jpg","M.E.-Contracting-Modern-Landscaping-Project-Complete-With-Woodworking-Pergola-Stone-Interlocking-Fiberglass-Pool-Installation.jpg","M.E.-Contracting-Small-Toronto-Backyard-Landscaping-Design-Project-Featuring-Stone-Interlocking-Vinyl-Pool-Installation-with-Swim-Spa-Landscape-Design-Woodworking-Pergola.jpg"],
+      "p10": ["Backyard-Complete-Landscaping-Project-by-M.E.-Contracting-Featuring-Fiberglass-Pool-Installation-Landscape-Design-TREX-Decking-Interlocking-Softscpae.jpg","Birds-Eye-View-Of-Toronto-Landscaping-Project-Featuring-Fiberglass-Pool-Installation-Small-Pool-Deck-Interlocking-Softscape-TREX-Decking-by-M.E.-Contracting.jpg","Elegant-Toronto-Backyard-Landscape-Design-Featuring-FIberglass-Pool-Installation-Pool-Deck-Interlocking-Softscape-TREX-Decking-by-M.E.-Contracting.jpg","Fiberglass-Pool-Installation-for-Toronto-Landscaping-Project-with-Pool-Deck-Interlocking-Patio-Design-TREX-Decking-Softscape.jpg","M.E.-Contracting-Landscaping-Project-for-Toronto-Home-Featuring-Pool-Deck-Interlocking-Fiberglass-Pool-Installation-Patio-Design.jpg","M.E.-Contracting-Small-Backyard-Landscaping-Project-with-PVC-Decking-Stone-Interlocking-Fiberglass-Pool-Installation-and-Landscape-Design.jpg","Master-Backyard-Trasformation-Landscaping-Project-by-M.E.-Contracting-Featuring-Pool-Deck-Interlocking-Fiberglass-Pool-Installation-Patio-Design-and-Softscape.jpg","Small-Toronto-Backyard-Landscape-Design-Project-with-Turf-Pool-Deck-Interlocking-TREX-Decking-Planters-by-M.E.-Contracting.jpg"],
+      "p11": ["Complete-Toronto-Landscaping-Project-Featuring-Interlocking-Spa-Pool-Installation-Fence-Build-PVC-Decking-Patio-Design-with-Glass-and-Aluminum-Railings-by-M.E.-Contracting.jpg","Landscaping-Project-by-M.E.-Contracting-Featuring-Interlocking-Swim-Spa-PVC-Decking-with-Stairs-Glass-Aluminum-Railings.jpg","M.E.-Contracting-Landscaping-Project-Featuring-Interlocking-Decking-with-Glass-Aluminum-Railings-Fencing-and-Small-Spa-Pool-Installation.jpg","Small-Backyard-Landscaping-Project-Featuring-Interlocking-Glass-Aluminum-Railings-PVC-Decking-Swim-Spa-and-Patio-Design.jpg","Toronto-Landscaping-Project-for-Small-Backyard-Featuring-Swim-Spa-Installation-Patio-Design-PVC-Decking-with-Stairs-Glass-Aluminum-Railings-Interlocking-by-M.E.-Contracting.jpg","Toronto-Premium-Landscaping-Project-with-PVC-Decking-Interlocking-Patio-Design-Swim-Spa.jpg"],
+      "p12": ["Complete-Sports-Court-Landscape-Design-Project-Abu-Residence.jpg","Complete-Toronto-Landscaping-Project-Featuring-Fiberglass-Pool-with-Water-Features-Outdoor-Fireplace-Stone-Interlocking-Patio-Metal-Pergola-and-Outdoor-Kitchen-by-M.E.-Contracting.jpg","M.E.-Contracting-Elegant-Backyard-Landscaping-Project-Featuring-Metal-Pergola-Outdoor-Fireplace-Pool-Installation-and-Sports-Court.jpg","M.E.-Contracting-Toronto-Backyard-Landscaping-Project-Featuring-Outdoor-Kitchen.jpg","M.E.-Contracting-Toronto-Landscape-Design-Project-Featuring-Pool-with-Water-Feature-and-Stone-Interlocking.jpg","M.E.-Contracting-Toronto-Landscape-Design-Project-Featuring-Stone-Interlocking.jpg","M.E.-Contracting-Toronto-Landscaping-Project-Featuring-Pool-with-Water-Features-Sports-Court-Metal-Pergola-Woodworking-and-Interlocking.jpg","M.E.-Contracting-Toronto-Landscaping-Project-Featuring-Water-Feature-and-Pool-Installation.jpg","Toronto-Landscaping-Project-Featuring-Fiberglass-Pool-with-Water-Features-Stone-Interlocking-Sports-Court-Installation-Outdoor-Fireplace-and-Metal-Pergola.jpg","Toronto-Landscaping-Project-Featuring-Outdoor-Fireplace-by-M.E.-Contracting.jpg","Toronto-Landscaping-Project-Featuring-Pool-Installation-with-Water-Features-Metal-Pergola-with-Outdoor-Fireplace-and-Outdoor-Kitchen-Area.jpg","Toronto-Landscaping-Project-Featuring-Woodworking-and-Pool-Installation-with-Water-Features.jpg"],
+      "p13": ["Close-Up-of-Pool-Deck-Interlocking-Complete-Landscape-Design-Project-by-M.E.-Contracting.jpg","Complete-Backyard-Landscape-Design-by-M.E.-Contracting-with-Concrete-Pool-PVC-Deck-Gazebo_Shed.jpg","Complete-Landscape-Design-Project-by-M.E.-Contracting-1.jpg","Complete-Toronto-Deck-Construction-by-The-Toronto-Landscaping-Company-1.jpg","Complete-Toronto-PVC-Decking-Project-M.E.-Contracting.jpg","Overview-of-Toronto-Landscaping-Project-on-Pheasant-Drive.jpg","PVC-Decking-on-Pheasant-Project-M.E.-Contracting.jpg","Toronto-Landscape-Design-on-Pheasant-Drive-with-Gazebo-Feature.jpg","Toronto-Landscape-Design-with-Concrete-Pool-Installation-Lighting-Features-Interlocking-Privacy-Fence-Gazebo.jpg","Toronto-Landscape-Design-with-Concrete-Pool-Privacy-Fence-Installation-by-M.E.-Contracting.jpg","Toronto-Landscaping-Company-Gazebo-Feature.jpg","Total-Backyard-Landscape-Design-Project-on-Pheasant-Drive-Featuring-Concrete-Pool-Gazebo-Interlocking-Privacy-Fence-PVC-Decking.jpg"],
+      "p14": ["Close-Up-of-Cabana-Fiberglass-Pool-Installation-Complete-Backyard-Toronto-Landscaping-Company-Project-in-Nortown-Toronto.jpg","Complete-Landscape-Design-Project-on-Joicey-Blvd-Featuring-Interlocking-Fiberglass-Pool-Outdoor-Fireplace-Kitchen-TREX-Decking-with-Stainless-Steel-Glass-Railings.jpg","Complete-Toronto-Landscaping-Project-on-Joicey-Blvd-Featuring-TREX-Decking-with-Stainless-Steel-Glass-Railings.jpg","Fiberglass-Pools-by-Toronto-Landscaping-Company-1.jpg","Front-Yard-Interlocking-Woodworking-on-Complete-Landscaping-Design-Project-in-Nortown-Toronto.jpg","Front-Yard-Interlocking-Woodworking-with-Soft-Scape-for-Toronto-Landscaping-Project-in-Nortown-Toronto.jpg","Joicey-Blvd-Front-Yard-Driveway-Interlocking-Landscaping-by-Toronto-Landscaping-Company.jpg","Joicey-Blvd-Toronto-Landscaping-Project-Featuring-TREX-Decking-with-Stainless-Steel-Glass-Railings-Outdoor-Kitchen-Interlocking-Privacy-Fencing.jpg","Joicey-Blvd-Toronto-Landscaping-Project-for-Medium-Sized-Backyard-Featuring-Fiberglass-Pool-Installation-Interlocking-Decking-Outdoor-Kitchen-Stainless-Steel-Glass-Railings.jpg","Outdoor-Kitchen-Outdoor-Fireplace-Feature-for-Joicey-Blvd-Complete-Landscape-Design-Project.jpg","Toronto-Landscaping-Company-Featuring-Outdoor-Kitchen-768x512.jpg","Toronto-Landscaping-Design-Project-on-Joicey-Blvd-Featuring-Fiberglass-Pool-Installation-Retaining-Wall-Privacy-Fencing-Interlocking-TREX-Decking.jpg"],
+      "p15": ["Chine-Drive-Backyard-Landscaping-Project-with-Small-Composite-Deck-Build-Aluminum-Tempered-Glass-Railings.jpg","Chine-Drive-Toronto-Landscaping-Project-Featuring-Patio-Design-Interlocking-by-M.E.-Contracting.jpg","Complete-Overview-of-Large-Backyard-Toronto-Landscape-Design-Project-by-M.E.-Contracting-on-Chine-Drive.jpg","Toronto-Landscape-Design-Patio-Design-Project-on-Chine-Drive-Featuring-Interlocking-Decking-Aluminum-Glass-Railings.jpg","Toronto-Landscaping-Company-Patio-Design-Interlocking-Project-on-Chine-Drive.jpg","Toronto-Landscaping-Design-Project-with-Interlocking-Outdoor-Kitchen-on-Chine-Drive-by-M.E.-Contracting.jpg"],
+      "p16": ["Complete-Landscaping-Design-Project-by-Toronto-Landscaping-Company-Lyonsgate.jpg","Composite-Deck-Featuring-Stainless-Steel-Railing-1.jpg","Composite-Decking-Toronto-by-Toronto-Landscaping-Company.jpg","Fiberglass-Pools-by-Toronto-Landscaping-Contractors-1.jpg","Lyonsgate-Landscape-Design-Project-Featuring-Composite-Decking-Stainless-Steel-Railings-Fiberglass-Pool-Privacy-Fence-Outdoor-Kitchen.jpg","Lyonsgate-Landscape-Design-Project-Featuring-Fiberglass-Pool-Installation.jpg","Lyonsgate-Toronto-Front-Backyard-Landscaping-Project-by-M.E.-Contracting.jpg","Lyonsgate-Toronto-Landscape-Project-with-Woodworking-Gazebo-Fiberglass-Pool-Installation.jpg","Toronto-Landscaping-5-Landscaping-Solutions-768x512.jpg","Woodworking-by-Toronto-Landscaping-Contractors-2.jpg"],
+      "17": ["Complete-Landscaping-Design-Project-Featuring-Small-Composite-Deck-Build-Privacy-Fence-Interlocking-Small-Retaining-Wall-Outdoor-Fireplace.jpg","Hillhurst-Landscaping-Project-with-Privacy-Fence-by-M.E.-Contracting.jpg","Hillhurst-Project-Featuring-Tempered-Glass-Stainless-Steel-Railings-Composite-Decking-Patio-Interlocking-Outdoor-Fireplace.jpg_.jpg","Hillhurst-Toronto-Landscape-Design-with-Small-Retaining-Wall-Privacy-Fence-Interlocking.jpg","Small-Backyard-Landscaping-Project-by-Toronto-Landscaping-Company-Featuring-Small-Composite-Deck-Build-with-Stainless-Steel-Railings.jpg","Toronto-Landscape-Design-Project-Featuring-Small-Retaining-Wall-Interlocking-Privacy-Fence-Outdoor-Fireplace.jpg"],
+      "18": ["Toronto-Landscape-Design-Patio-Design-Project-Featuring-Composite-Decking-Wrought-Iron-Glass-Railings-Outdoor-Fireplace-Interlocking.jpg","Toronto-Landscape-Design-with-Outdoor-Kitchen-Wrought-Iron-Railings.jpg","Toronto-Landscaping-Company-Specializing-in-Patio-Design.jpg","Toronto-Patio-Design-with-Outdoor-Kitchen-Feature-by-Toronto-Landscaping-Company.jpg"],
+      "19": ["Azek-Decking-Project-by-The-Toronto-Landscaping-Contractors.-2.jpg","IPE-Decking-Project-Toronto-Landscaping-Contractors-1.jpg","Jacuzzi-Spa-Feature-Ginsler-Toronto-Landscape-Design-Project.jpg","Jucuzzi-Tub-Sports-Court-Feature-Toronto-Landscape-Design-Ginsler.jpg","Spa-Pool-Installation-by-Toronto-Landscaping-Company.jpg","Toronto-Landscaping-Company-Sports-Court-1.jpg","Toronto-Landscaping-Company-Sports-Court-Installation.jpg","Toronto-Patio-Design-for-Small-Backyard-Project.jpg"],
+      "20": ["Charbel-Fiberglass-Pool-Outdoor-Kitchen-Projecrt.jpg","Charbel-Toronto-Landscaping-Design-Project-Featuring-Fiberglass-Pool-with-Water-Feature_.jpg","Pergola-Interlocking-Outdoor-Kitchen-Fiberglass-Reflection-Pool-Installation-Project.jpg","Reflection-Pool-Installation-for-Small-Toronto-Backyard.jpg","Small-Fiberglass-Reflection-Pool-with-Water-Feature-Installation-Project.jpg","Toronto-Landscaping-Project-Featuring-Woodworking-Pergola-Fiberglass-Pool.jpg","Woodworking-Pergola-Design-in-Small-Toronto-Backyard-by-Toronto-Landscaping-Company.jpg"],
+      "21": ["Close-Up-Retaining-Wall-Feature-on-Modern-Landscaping-Project.jpg","Complete-Front-Yard-Modern-Landscape-Design-Interlocking-Project.jpg","Front-Entrance-Steps-Interlocking-Soft-Scaping-by-Toronto-Landscaping-Contractors.jpg","Front-Yard-Modern-Toronto-Landscaping-Project-by-Toronto-Landscaping-Company.jpg","Modern-Landscape-Design-Project-Featuring-Interlocking-Soft-Scaping.jpg","Modern-Toronto-Landscaping-Design-Richmond-Project.jpg","Toronto-Landscaping-Interlocking-Company-Modern-Project-Richmond.jpg"],
+      "22": ["Cedar-Point-Toronto-Landscaping-Project-Featuring-Pool-Installation-Interlocking-Retaining-Walls.jpg","Close-Up-of-Pool-Deck-Raised-Interlocking-Feature-for-Cedar-Point-Project-by-Toronto-Landscaping-Company.jpg","Complete-Landscape-Project-by-M.E.-Contracting-Featuring-Pool-Installation-Retaining-Wall-Interlocking-Woodwroking.jpg","Concrete-Pool-Feature-for-Cedar-Point-Project.jpg","Toronto-Landscaping-Company-Irrigation-Sprinkler-System-copy.jpg","Toronto-Landscaping-Driveway-Paving-Project-copy.jpg","Toronto-Landscaping-Featuring-Outdoor-Kitchen-copy.jpg","Toronto-Landscaping-Project-Sports-Court-Cedar-Point.jpg"],
+      "23": ["AZEK-Decking-Landscaping-Project-by-Toronto-Landscaping-Company-1.jpg","Azek-Decking-Stainless-Steel-Railings-Project-Landscaping-Toronto-1.jpg","Backyard-Toronto-Landscape-Design-Project-with-Woodworking-Outdoor-Kitchen-Jasmin.jpg","Bright-Blue-Landscape-Design-Project-with-Woodworking-Pool-Installation-1.jpg","Complete-Small-Backyard-Landscaping-Project-Featuring-Outdoor-Fireplace-1.jpg","Complete-Toronto-Landscape-Design-Interlocking-Pool-Installation-Project.jpg_.jpg","Full-Toronto-Landscaping-Design-Project-by-Toronto-Landscaping-Company-1.jpg","Large-Woodworking-Project-Featuring-Pergola-by-Toronto-Landscaping-Contractors-1.jpg","Night-View-of-Complete-Landscaping-Project-for-Small-Toronto-Backyard-1.jpg","Toronto-Landscaping-Company-Complete-Landscape-Design-Pool-Installation-Project.jpg","Toronto-Landscaping-Project-For-Small-Backyard-with-Pool-Installation-Woodworking.jpg","Total-Landscape-Design-Project-for-Small-Toronto-Backyard-by-Toronto-Landscaping-Contractors.jpg_.jpg"]
+    };
+
+    const projectNames = {
+      "p1": "Walker Ave Modern Landscape", "p2": "Glenayr Garden Oasis", "p3": "Baycrest Stone Patio",
+      "p4": "Ramsey Estate Landscape", "p5": "Oxford Modern Patio", "p6": "Rathburn Luxury Pool",
+      "p7": "Modern PVC Deck & Pool", "p8": "Outdoor Kitchen & Cabana", "p9": "Complete Backyard Oasis",
+      "p10": "TREX Deck & Fiberglass Pool", "p11": "Spa Pool & PVC Decking", "p12": "Sports Court & Luxury Pool",
+      "p13": "Concrete Pool & Gazebo", "p14": "Joicey Blvd Complete Design", "p15": "Chine Drive Interlocking",
+      "p16": "Lyonsgate Composite Deck", "17": "Hillhurst Small Backyard", "18": "Wrought Iron & Outdoor Kitchen",
+      "19": "Sports Court & Spa", "20": "Reflection Pool & Pergola", "21": "Modern Front Yard",
+      "22": "Cedar Point Pool & Retaining", "23": "AZEK Decking & Woodworking"
+    };
+
+    const projectDescriptions = {
+      "p1": "Complete front yard transformation", "p2": "Luxury garden with natural stone", "p3": "Premium interlocking driveway",
+      "p4": "Complete property transformation", "p5": "Contemporary interlocking design", "p6": "Custom fiberglass pool",
+      "p7": "Deck with glass railings & pool", "p8": "Outdoor kitchen & woodworking", "p9": "Pool, pergola & fireplace",
+      "p10": "Fiberglass pool & TREX decking", "p11": "Spa installation & interlocking", "p12": "Metal pergola & sports court",
+      "p13": "Concrete pool with gazebo", "p14": "TREX decking & outdoor kitchen", "p15": "Patio design & composite deck",
+      "p16": "Stainless steel railings & pool", "17": "Small composite deck build", "18": "Patio with outdoor kitchen",
+      "19": "Sports court & spa installation", "20": "Woodworking pergola design", "21": "Modern front yard interlocking",
+      "22": "Pool with retaining walls", "23": "AZEK decking & pool installation"
+    };
+
+    const categoryMap = {
+      "p1": "landscaping", "p2": "landscaping", "p3": "hardscaping", "p4": "landscaping",
+      "p5": "hardscaping", "p6": "pools", "p7": "decking", "p8": "decking", "p9": "landscaping",
+      "p10": "pools", "p11": "decking", "p12": "landscaping", "p13": "pools", "p14": "decking",
+      "p15": "hardscaping", "p16": "decking", "17": "decking", "18": "woodworking",
+      "19": "hardscaping", "20": "woodworking", "21": "landscaping", "22": "pools", "23": "decking"
+    };
+
+    // Render portfolio grid
+    function renderPortfolio() {
+      const grid = document.getElementById('portfolioGrid');
+      const folders = ["p1","p2","p3","p4","p5","p6","p7","p8","p9","p10","p11","p12","p13","p14","p15","p16","17","18","19","20","21","22","23"];
+      
+      grid.innerHTML = '';
+      folders.forEach(folder => {
+        const images = folderImages[folder];
+        if (!images || images.length === 0) return;
+        
+        const firstImage = images[0];
+        const folderPath = folder;
+        const imgUrl = BASE_RAW + folderPath + "/" + firstImage;
+        const category = categoryMap[folder] || 'landscaping';
+        const name = projectNames[folder] || folder;
+        const desc = projectDescriptions[folder] || 'Premium outdoor project';
+        
+        const item = document.createElement('div');
+        item.className = 'portfolio-item';
+        item.setAttribute('data-category', category);
+        item.setAttribute('data-folder', folder);
+        item.setAttribute('data-project-name', name);
+        
+        item.innerHTML = `
+          <img src="${imgUrl}" alt="${name}" loading="lazy">
+          <div class="portfolio-overlay">
+            <h3>${name}</h3>
+            <p>${desc}</p>
+            <a href="#" class="btn-outline-small view-project">View Project</a>
+          </div>
+        `;
+        grid.appendChild(item);
+      });
+      
+      attachViewProjectListeners();
+    }
+
+    function showProjectGallery(projectItem) {
+      const folder = projectItem.getAttribute('data-folder');
+      const projectName = projectItem.getAttribute('data-project-name');
+      const images = folderImages[folder] || [];
+      
+      if (images.length === 0) return;
+      
+      let gridHtml = '<div class="lightbox-grid">';
+      images.forEach(img => {
+        const fullUrl = BASE_RAW + folder + "/" + img;
+        gridHtml += `<div><img src="${fullUrl}" alt="Project Image" loading="lazy"></div>`;
+      });
+      gridHtml += '</div>';
+
+      const modal = document.createElement('div');
+      modal.className = 'lightbox-modal';
+      modal.innerHTML = `
+        <div class="lightbox-content">
+          <div class="lightbox-header">
+            <h3>${projectName} - Full Gallery</h3>
+            <button class="lightbox-close">Close</button>
+          </div>
+          ${gridHtml}
+        </div>
+      `;
+      document.body.appendChild(modal);
+      modal.querySelector('.lightbox-close').addEventListener('click', () => modal.remove());
+      modal.addEventListener('click', (e) => { if (e.target === modal) modal.remove(); });
+    }
+
+    function attachViewProjectListeners() {
+      document.querySelectorAll('.view-project').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const item = btn.closest('.portfolio-item');
+          if (item) showProjectGallery(item);
+        });
+      });
+    }
+
+    // Filter functionality
+    function setupFilters() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const portfolioItems = () => document.querySelectorAll('.portfolio-item');
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          portfolioItems().forEach(item => {
+            item.style.display = (filter === 'all' || item.getAttribute('data-category') === filter) ? 'block' : 'none';
+          });
+        });
+      });
+    }
+
+    // Load components - ORIGINAL HEADER/FOOTER STRUCTURE
+    async function loadComponent(componentName, placeholderId) {
+      try {
+        const response = await fetch(`${componentName}.html`);
+        if (response.ok) {
+          const html = await response.text();
+          document.getElementById(placeholderId).innerHTML = html;
+          return true;
+        } else {
+          console.error(`Failed to load ${componentName}.html`);
+          return false;
+        }
+      } catch (error) {
+        console.error(`Error loading ${componentName}:`, error);
+        return false;
+      }
+    }
+
+    // Load header and footer
+    Promise.all([
+      loadComponent('header', 'header-placeholder'),
+      loadComponent('footer', 'footer-placeholder')
+    ]).then(() => {
+      // Navbar scroll effect
+      const navbar = document.getElementById('navbar');
+      if (navbar) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) navbar.classList.add('scrolled');
+          else navbar.classList.remove('scrolled');
+        });
+      }
+
+      // Mobile menu functionality
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const closeMenu = document.getElementById('closeMenu');
+
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => mobileMenu.classList.add('active'));
+        if (closeMenu) closeMenu.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        document.querySelectorAll('.mobile-menu a, .mobile-menu .mobile-btn').forEach(link => {
+          link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        });
+      }
+
+      // Logo click
+      const logoLink = document.getElementById('logoLink');
+      if (logoLink) {
+        logoLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.href = 'index.html';
+        });
+      }
+
+      // Re-attach contact button events
+      document.querySelectorAll('.hero-cta-btn, .portfolio-cta, .btn-nav, #contactNavBtn, #mobileContactBtn').forEach(btn => {
+        btn?.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.href = 'contact-us.html';
+        });
+      });
+    });
+
+    // Initialize
+    renderPortfolio();
+    setupFilters();
+  </script>
+</body>
+</html>
