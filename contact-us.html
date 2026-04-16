@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <meta name="description" content="Contact M.E. Contracting - Toronto's award-winning landscaping, deck, pool, and outdoor living company. Get a free estimate today.">
+  <title>Contact Us | M.E. Contracting – Toronto Landscaping & Pool Company</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #353738;
+      color: #FFFFFF;
+      line-height: 1.5;
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 100%;
+      position: relative;
+    }
+
+    html {
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 100%;
+      scroll-behavior: smooth;
+    }
+
+    /* COMPLETELY HIDE ALL SCROLLBARS */
+    body::-webkit-scrollbar,
+    html::-webkit-scrollbar {
+      display: none;
+    }
+    body, html {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* Typography */
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 4rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #FFFFFF;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-block;
+      background: #D4AF37;
+      color: #353738;
+      font-weight: 600;
+      padding: 14px 36px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: #E8C45A;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      border: 1px solid #D4AF37;
+      color: #D4AF37;
+      font-weight: 500;
+      padding: 12px 32px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 0.85rem;
+    }
+
+    .btn-outline:hover {
+      background: #D4AF37;
+      color: #353738;
+    }
+
+    .btn-submit {
+      background: #D4AF37;
+      color: #353738;
+      font-weight: 600;
+      padding: 14px 36px;
+      border-radius: 40px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+
+    .btn-submit:hover {
+      background: #E8C45A;
+      transform: translateY(-2px);
+    }
+
+    /* ----- NAVBAR ----- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 24px 0;
+      z-index: 1000;
+      transition: all 0.4s ease;
+      background: transparent;
+    }
+
+    .navbar.scrolled {
+      background: rgba(53, 55, 56, 0.98);
+      backdrop-filter: blur(10px);
+      padding: 16px 0;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .logo {
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .logo-main {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      transition: color 0.3s ease;
+    }
+
+    .navbar.scrolled .logo-main {
+      color: #D4AF37;
+    }
+
+    .logo-sub {
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.7);
+      letter-spacing: 2px;
+      margin-left: 4px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar.scrolled .logo-sub {
+      color: #A0A0A5;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 42px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #FFFFFF;
+      transition: 0.2s;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .navbar.scrolled .nav-links a {
+      color: #FFFFFF;
+    }
+
+    .nav-links a:hover {
+      color: #D4AF37;
+    }
+
+    .nav-links a.active {
+      color: #D4AF37;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #353738;
+      border-radius: 12px;
+      padding: 12px 0;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s;
+      z-index: 1000;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links > li {
+      position: relative;
+    }
+
+    .nav-links > li:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 24px;
+      color: #FFFFFF !important;
+      font-size: 0.85rem;
+    }
+
+    .dropdown-menu a:hover {
+      background: rgba(212, 175, 55, 0.1);
+      color: #D4AF37 !important;
+    }
+
+    .nav-contact {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-phone {
+      text-decoration: none;
+      font-weight: 500;
+      color: #FFFFFF;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-phone i {
+      color: #D4AF37;
+    }
+
+    .navbar.scrolled .nav-phone {
+      color: #FFFFFF;
+    }
+
+    .nav-phone:hover {
+      color: #D4AF37;
+    }
+
+    .btn-nav {
+      background: rgba(212, 175, 55, 0.15);
+      color: #D4AF37;
+      font-weight: 500;
+      padding: 8px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.2s;
+      font-size: 0.8rem;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      cursor: pointer;
+    }
+
+    .navbar.scrolled .btn-nav {
+      background: #D4AF37;
+      color: #353738;
+      border: none;
+    }
+
+    .btn-nav:hover {
+      background: #D4AF37;
+      color: #353738;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 12px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    .menu-toggle i {
+      font-size: 1.2rem;
+      color: #FFFFFF;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 320px;
+      height: 100vh;
+      background: #353738;
+      box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+      z-index: 1001;
+      transition: right 0.4s ease;
+      padding: 100px 32px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .mobile-menu::-webkit-scrollbar {
+      display: none;
+    }
+    .mobile-menu {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    .mobile-menu .close-btn {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #FFFFFF;
+    }
+
+    .mobile-menu a {
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #FFFFFF;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-menu .mobile-dropdown {
+      margin-left: 16px;
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-menu .mobile-dropdown a {
+      font-size: 0.9rem;
+      border-bottom: none;
+      color: #A0A0A5;
+    }
+
+    .mobile-contact {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-contact a {
+      display: block;
+      margin-bottom: 16px;
+      border-bottom: none;
+    }
+
+    .mobile-btn {
+      background: #D4AF37;
+      color: #353738;
+      text-align: center;
+      padding: 12px;
+      border-radius: 40px;
+      margin-top: 10px;
+    }
+
+    /* Page Hero with Text Reveal Animation */
+    .page-hero {
+      position: relative;
+      width: 100%;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 160px 24px 100px;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://raw.githubusercontent.com/Tharindumal/M.E.-CONTRACTING/05d65b3dfc6d9beba60a250f1846c03dac3c60b4/images/decks/4glenayr.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(53, 55, 56, 0.65);
+      z-index: 0;
+    }
+
+    .page-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Text Reveal Animation */
+    .reveal-text {
+      color: #FFFFFF;
+      font-size: 5.5rem;
+      font-weight: 800;
+      margin-bottom: 0;
+      text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+      line-height: 1.2;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: revealText 1s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+    }
+
+    @keyframes revealText {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Button Reveal Animation */
+    .reveal-btn {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: revealBtn 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1) 0.3s forwards;
+    }
+
+    @keyframes revealBtn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 80px 0;
+      background: #353738;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .contact-info {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 28px;
+      padding: 40px;
+    }
+
+    .contact-info h2 {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      color: #D4AF37;
+    }
+
+    .info-item {
+      margin-bottom: 32px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .info-icon {
+      width: 50px;
+      height: 50px;
+      background: #D4AF37;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #353738;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .info-content h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #D4AF37;
+    }
+
+    .info-content p, .info-content a {
+      color: #A0A0A5;
+      text-decoration: none;
+      transition: color 0.2s;
+      line-height: 1.5;
+    }
+
+    .info-content a:hover {
+      color: #D4AF37;
+    }
+
+    .hours-list p {
+      margin-bottom: 8px;
+      color: #A0A0A5;
+    }
+
+    .hours-list .closed {
+      color: #e74c3c;
+      font-weight: 500;
+    }
+
+    .note {
+      font-size: 0.8rem;
+      color: #666670;
+      margin-top: 16px;
+      font-style: italic;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 28px;
+      padding: 40px;
+    }
+
+    .contact-form h2 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      color: #D4AF37;
+    }
+
+    .form-subhead {
+      color: #A0A0A5;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #FFFFFF;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      background: rgba(255, 255, 255, 0.05);
+      color: #FFFFFF;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #D4AF37;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    }
+
+    .form-group input::placeholder,
+    .form-group select,
+    .form-group textarea::placeholder {
+      color: #888888;
+    }
+
+    .form-group select option {
+      background: #353738;
+      color: #FFFFFF;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* Normal Horizontal Cards - NO SWIPER */
+    .media-section {
+      padding: 60px 0 100px;
+      background: #353738;
+    }
+
+    .media-section h2 {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .media-subhead {
+      text-align: center;
+      color: #A0A0A5;
+      margin-bottom: 50px;
+      font-size: 1rem;
+    }
+
+    .media-grid-horizontal {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .media-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      transition: all 0.3s ease;
+      width: 380px;
+      flex-shrink: 0;
+    }
+
+    .media-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(212, 175, 55, 0.6);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .media-card-content {
+      padding: 24px;
+    }
+
+    .media-card-content h3 {
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      color: #D4AF37;
+      text-align: center;
+    }
+
+    .media-wrapper {
+      position: relative;
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .media-wrapper iframe {
+      width: 100%;
+      height: 250px;
+      display: block;
+      border: 0;
+    }
+
+    /* Footer */
+    .footer {
+      background: #353738;
+      padding: 60px 0 32px;
+      text-align: center;
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 48px;
+      margin-bottom: 48px;
+      text-align: left;
+    }
+
+    .footer-col h4 {
+      color: #D4AF37;
+      margin-bottom: 24px;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col ul li a {
+      color: #A0A0A5;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      font-size: 0.85rem;
+    }
+
+    .footer-col ul li a:hover {
+      color: #D4AF37;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #D4AF37;
+      margin-bottom: 8px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .footer-tagline {
+      font-size: 0.7rem;
+      color: #A0A0A5;
+      margin-bottom: 24px;
+    }
+
+    .footer-contact p {
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+      color: #A0A0A5;
+    }
+
+    .footer-contact i {
+      width: 24px;
+      margin-right: 8px;
+      color: #D4AF37;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 32px;
+      font-size: 0.7rem;
+      color: #666670;
+    }
+
+    /* Fade In Animation */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container, .nav-container, .footer-container {
+        padding: 0 20px;
+      }
+      
+      .reveal-text {
+        font-size: 3.8rem;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      .menu-toggle {
+        display: flex;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .nav-contact {
+        display: none;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      
+      .media-grid-horizontal {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .media-card {
+        width: 100%;
+        max-width: 400px;
+      }
+      
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .reveal-text {
+        font-size: 2.8rem;
+      }
+      
+      .contact-info, .contact-form {
+        padding: 24px;
+      }
+      
+      .info-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+      }
+      
+      .media-card {
+        max-width: 320px;
+      }
+      
+      .media-wrapper iframe {
+        height: 180px;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main>
+    <!-- Page Hero with Text Reveal Animation -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="reveal-text">Contact Us</h1>
+        <a href="#estimate-form" class="btn-primary hero-cta-link reveal-btn" style="margin-top: 32px; display: inline-block;">Schedule a Consultation</a>
+      </div>
+    </section>
+
+    <section class="contact-section fade-in-up">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="info-content">
+                <h3>M.E. Contracting:</h3>
+                <p>63 Alness St. Unit 7,<br>Toronto, Ontario M3J 2H2, Canada</p>
+                <p class="note">*Showroom visits by appointment only.</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="info-content">
+                <h3>Phone</h3>
+                <p><a href="tel:4162386700">416-238-6700</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <div class="info-content">
+                <h3>Email</h3>
+                <p><a href="mailto:info@mecontracting.ca">info@mecontracting.ca</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-clock"></i></div>
+              <div class="info-content">
+                <h3>Hours Of Operation</h3>
+                <div class="hours-list">
+                  <p>Monday to Friday: <strong>9 AM – 4 PM</strong></p>
+                  <p>Saturday: <strong>9 AM – 1 PM</strong></p>
+                  <p>Sunday: <span class="closed">Closed</span></p>
+                  <p class="note">*Please note: Showroom visits by appointment only.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form" id="estimate-form">
+            <h2>REQUEST A FREE ESTIMATE</h2>
+            <p class="form-subhead">Fill out the form below and we'll get back to you within 24 hours.</p>
+            <form id="contactForm">
+              <div class="form-group">
+                <label>Name *</label>
+                <input type="text" name="name" placeholder="First & last name" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Phone *</label>
+                  <input type="tel" name="phone" placeholder="Phone number" required>
+                </div>
+                <div class="form-group">
+                  <label>Email *</label>
+                  <input type="email" name="email" placeholder="Email address" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>City *</label>
+                  <input type="text" name="city" placeholder="City" required>
+                </div>
+                <div class="form-group">
+                  <label>Address *</label>
+                  <input type="text" name="address" placeholder="Postal Code Or Main Intersection" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>How Did You Hear About Us? *</label>
+                <select name="source" required>
+                  <option value="">How Did You Hear About Us?</option>
+                  <option value="Google">Google</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Referral">Referral</option>
+                  <option value="YouTube">YouTube</option>
+                  <option value="Advertisement">Advertisement</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Please Describe Your Project *</label>
+                <textarea name="message" placeholder="Please tell us about your project so we can provide you with better, faster service..." required></textarea>
+              </div>
+              <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Normal Horizontal Cards - NO SWIPER -->
+    <section class="media-section fade-in-up">
+      <div class="container">
+        <h2>Explore Our Work</h2>
+        <p class="media-subhead">Discover our showroom, location, and portfolio in action</p>
+      </div>
+      <div class="container">
+        <div class="media-grid-horizontal">
+          <!-- Find Us Card -->
+          <div class="media-card">
+            <div class="media-card-content">
+              <h3>Find Us</h3>
+              <div class="media-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.9870283140044!2d-79.4725638!3d43.7731281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2e08f8e27d3b%3A0xefa77f78893f65cc!2sM.E.%20Contracting!5e0!3m2!1sen!2slk!4v1774621371418!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+          <!-- Showroom 360° View Card -->
+          <div class="media-card">
+            <div class="media-card-content">
+              <h3>Showroom 360° View</h3>
+              <div class="media-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!4v1774622629111!6m8!1m7!1sCAoSLEFGMVFpcE9sVlJNWjA0My0wNmJwLVpBYXh3MlFvZ3JWRWNVOTFBV05RTUU1!2m2!1d43.77321076081203!2d-79.47242450165167!3f75.8!4f-10.540000000000006!5f0.4000000000000002" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+          <!-- YouTube Video Card -->
+          <div class="media-card">
+            <div class="media-card-content">
+              <h3>See Our Work in Action</h3>
+              <div class="media-wrapper">
+                <iframe src="https://www.youtube.com/embed/Nh-Tk3-nIeE" title="M.E. Contracting Portfolio" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // Function to load HTML components
+    async function loadComponent(componentName, placeholderId) {
+      try {
+        const response = await fetch(`${componentName}.html`);
+        if (response.ok) {
+          const html = await response.text();
+          document.getElementById(placeholderId).innerHTML = html;
+          return true;
+        } else {
+          console.error(`Failed to load ${componentName}.html`);
+          return false;
+        }
+      } catch (error) {
+        console.error(`Error loading ${componentName}:`, error);
+        return false;
+      }
+    }
+
+    // Load header and footer
+    Promise.all([
+      loadComponent('header', 'header-placeholder'),
+      loadComponent('footer', 'footer-placeholder')
+    ]).then(() => {
+      // Navbar scroll effect
+      const navbar = document.getElementById('navbar');
+      if (navbar) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) navbar.classList.add('scrolled');
+          else navbar.classList.remove('scrolled');
+        });
+      }
+
+      // Mobile menu functionality
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const closeMenu = document.getElementById('closeMenu');
+
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => mobileMenu.classList.add('active'));
+        if (closeMenu) closeMenu.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        document.querySelectorAll('.mobile-menu a, .mobile-menu .mobile-btn').forEach(link => {
+          link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        });
+      }
+
+      // Logo click
+      const logoLink = document.getElementById('logoLink');
+      if (logoLink) {
+        logoLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.href = 'index.html';
+        });
+      }
+    });
+
+    // Smooth scroll for hero link
+    const heroCtaLink = document.querySelector('.hero-cta-link');
+    if (heroCtaLink) {
+      heroCtaLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+
+    // Contact form submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        let message = 'Thank you for contacting M.E. Contracting!\n\nWe will get back to you within 24 hours.\n\nHere\'s what you sent:\n';
+        for (let [key, value] of formData.entries()) {
+          if (value) message += `\n${key}: ${value}`;
+        }
+        alert(message);
+        contactForm.reset();
+      });
+    }
+
+    // Fade-in observer
+    const fadeElements = document.querySelectorAll('.fade-in-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
