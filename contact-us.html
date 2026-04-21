@@ -1105,7 +1105,7 @@
       });
     }
 
-    // Contact form submission - MAILTO METHOD (Sends to gtwebstudio101@gmail.com)
+    // Contact form submission - MAILTO METHOD (Sends to info@mecontracting.ca)
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
       contactForm.addEventListener('submit', function(e) {
@@ -1147,11 +1147,11 @@ ${message}
 This message was sent from the M.E. Contracting website contact form.
         `.trim();
         
-        // Open user's email client with pre-filled message to gtwebstudio101@gmail.com
-        window.location.href = `mailto:gtwebstudio101@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        // Open user's email client with pre-filled message to info@mecontracting.ca
+        window.location.href = `mailto:info@mecontracting.ca?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         
         // Show confirmation message
-        alert('Thank you for contacting M.E. Contracting!\n\nYour email client should open with a pre-filled message.\n\nPlease click "Send" in your email client to complete the submission.\n\nIf your email client doesn\'t open, please email us directly at gtwebstudio101@gmail.com');
+        alert('Thank you for contacting M.E. Contracting!\n\nYour email client should open with a pre-filled message.\n\nPlease click "Send" in your email client to complete the submission.\n\nIf your email client doesn\'t open, please email us directly at info@mecontracting.ca');
         
         // Reset form
         contactForm.reset();
