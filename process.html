@@ -410,6 +410,7 @@
       background-position: center;
       background-repeat: no-repeat;
       z-index: 0;
+      animation: heroZoom 20s ease-in-out infinite alternate;
     }
 
     .process-hero::after {
@@ -421,6 +422,11 @@
       height: 100%;
       background: rgba(53, 55, 56, 0.7);
       z-index: 0;
+    }
+
+    @keyframes heroZoom {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
     }
 
     .hero-grid {
@@ -439,6 +445,7 @@
       margin-bottom: 1rem;
       color: #FFFFFF;
       line-height: 1.2;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
     }
 
     .hero-content p {
@@ -446,6 +453,11 @@
       margin-bottom: 1.5rem;
       line-height: 1.7;
       font-size: 1rem;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+
+    .hero-content .btn-primary {
+      animation: fadeInUp 0.8s ease-out 0.6s both;
     }
 
     .hero-video {
@@ -454,6 +466,7 @@
       border-radius: 28px;
       overflow: hidden;
       border: 1px solid rgba(212, 175, 55, 0.3);
+      animation: fadeInRight 0.8s ease-out 0.4s both;
     }
 
     .hero-video iframe {
@@ -461,6 +474,28 @@
       height: 350px;
       display: block;
       border: 0;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     /* Design & Build Section */
@@ -494,6 +529,12 @@
       object-fit: cover;
       box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.3);
       border: 1px solid rgba(212, 175, 55, 0.2);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .design-build-image img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 30px 40px -12px rgba(0, 0, 0, 0.4);
     }
 
     /* Process Steps Section */
@@ -524,6 +565,14 @@
       display: flex;
       gap: 40px;
       align-items: flex-start;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+
+    .step-item.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .step-number-large {
@@ -538,6 +587,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .step-item:hover .step-number-large {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
     }
 
     .step-content {
@@ -928,17 +983,31 @@
       });
     });
 
-    // Fade-in observer
+    // Fade-in observer for sections
     const fadeElements = document.querySelectorAll('.fade-in-up');
-    const observer = new IntersectionObserver((entries) => {
+    const fadeObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          fadeObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-    fadeElements.forEach(el => observer.observe(el));
+    fadeElements.forEach(el => fadeObserver.observe(el));
+
+    // Staggered animation for process steps
+    const stepItems = document.querySelectorAll('.step-item');
+    const stepObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 150);
+          stepObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
+    stepItems.forEach(el => stepObserver.observe(el));
   </script>
 </body>
 </html>
