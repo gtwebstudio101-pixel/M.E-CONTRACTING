@@ -1105,7 +1105,7 @@
       });
     }
 
-    // Contact form submission using mailto: method
+    // Contact form submission - MAILTO METHOD (Sends to gtwebstudio101@gmail.com)
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
       contactForm.addEventListener('submit', function(e) {
@@ -1120,26 +1120,38 @@
         const source = document.getElementById('formSource').value;
         const message = document.getElementById('formMessage').value;
         
-        // Create email subject and body
-        const subject = `Free Estimate Request from ${name}`;
+        // Create email subject
+        const subject = `M.E. Contracting - New Estimate Request from ${name}`;
+        
+        // Create email body
         const body = `
+M.E. CONTRACTING - FREE ESTIMATE REQUEST
+=========================================
+
+CONTACT INFORMATION:
+-------------------
 Name: ${name}
 Phone: ${phone}
 Email: ${email}
 City: ${city}
-Address: ${address}
-How Did You Hear About Us?: ${source}
+Address/Postal Code: ${address}
+
+PROJECT DETAILS:
+---------------
+How did you hear about us?: ${source}
 
 Project Description:
 ${message}
-        `;
+
+=========================================
+This message was sent from the M.E. Contracting website contact form.
+        `.trim();
         
-        // Open default email client with pre-filled message
-        const mailtoLink = `mailto:info@mecontracting.ca?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        window.location.href = mailtoLink;
+        // Open user's email client with pre-filled message to gtwebstudio101@gmail.com
+        window.location.href = `mailto:gtwebstudio101@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         
-        // Optional: Show confirmation message
-        alert('Your default email program will open with a pre-filled message. Please send the email to submit your request.');
+        // Show confirmation message
+        alert('Thank you for contacting M.E. Contracting!\n\nYour email client should open with a pre-filled message.\n\nPlease click "Send" in your email client to complete the submission.\n\nIf your email client doesn\'t open, please email us directly at gtwebstudio101@gmail.com');
         
         // Reset form
         contactForm.reset();
