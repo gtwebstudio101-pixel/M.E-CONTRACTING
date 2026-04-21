@@ -32,7 +32,6 @@
       scroll-behavior: smooth;
     }
 
-    /* COMPLETELY HIDE ALL SCROLLBARS */
     body::-webkit-scrollbar,
     html::-webkit-scrollbar {
       display: none;
@@ -48,7 +47,6 @@
       padding: 0 32px;
     }
 
-    /* Typography */
     h1, h2, h3 {
       font-weight: 600;
       letter-spacing: -0.02em;
@@ -66,7 +64,6 @@
       color: #FFFFFF;
     }
 
-    /* Buttons */
     .btn-primary {
       display: inline-block;
       background: #D4AF37;
@@ -122,7 +119,6 @@
       transform: translateY(-2px);
     }
 
-    /* ----- NAVBAR ----- */
     .navbar {
       position: fixed;
       top: 0;
@@ -318,7 +314,6 @@
       color: #FFFFFF;
     }
 
-    /* Mobile Menu */
     .mobile-menu {
       position: fixed;
       top: 0;
@@ -405,7 +400,6 @@
       margin-top: 10px;
     }
 
-    /* Page Hero with Text Reveal Animation */
     .page-hero {
       position: relative;
       width: 100%;
@@ -448,7 +442,6 @@
       z-index: 2;
     }
 
-    /* Text Reveal Animation */
     .reveal-text {
       color: #FFFFFF;
       font-size: 5.5rem;
@@ -472,7 +465,6 @@
       }
     }
 
-    /* Button Reveal Animation */
     .reveal-btn {
       opacity: 0;
       transform: translateY(20px);
@@ -490,7 +482,6 @@
       }
     }
 
-    /* Contact Section */
     .contact-section {
       padding: 80px 0;
       background: #353738;
@@ -570,7 +561,6 @@
       font-style: italic;
     }
 
-    /* Contact Form */
     .contact-form {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
@@ -646,7 +636,6 @@
       gap: 20px;
     }
 
-    /* Normal Horizontal Cards - NO SWIPER */
     .media-section {
       padding: 60px 0 100px;
       background: #353738;
@@ -714,7 +703,6 @@
       border: 0;
     }
 
-    /* Footer */
     .footer {
       background: #353738;
       padding: 60px 0 32px;
@@ -797,7 +785,6 @@
       color: #666670;
     }
 
-    /* Fade In Animation */
     .fade-in-up {
       opacity: 0;
       transform: translateY(30px);
@@ -809,7 +796,6 @@
       transform: translateY(0);
     }
 
-    /* Form Status */
     .form-status {
       margin-top: 16px;
       padding: 12px;
@@ -825,7 +811,13 @@
       border: 1px solid rgba(39, 201, 63, 0.3);
     }
 
-    /* Responsive */
+    .form-status.error {
+      display: block;
+      background: rgba(229, 57, 53, 0.1);
+      color: #e53935;
+      border: 1px solid rgba(229, 57, 53, 0.3);
+    }
+
     @media (max-width: 900px) {
       .container, .nav-container, .footer-container {
         padding: 0 20px;
@@ -904,6 +896,14 @@
         text-align: center;
       }
     }
+
+    details summary {
+      list-style: none;
+    }
+    
+    details summary::-webkit-details-marker {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -911,7 +911,6 @@
   <div id="header-placeholder"></div>
 
   <main>
-    <!-- Page Hero with Text Reveal Animation -->
     <section class="page-hero">
       <div class="container">
         <h1 class="reveal-text">Contact Us</h1>
@@ -959,11 +958,11 @@
               </div>
             </div>
           </div>
+          
           <div class="contact-form" id="estimate-form">
             <h2>REQUEST A FREE ESTIMATE</h2>
             <p class="form-subhead">Fill out the form below and we'll get back to you within 24 hours.</p>
             
-            <!-- EXACT SAME METHOD AS GTWEBSTUDIO -->
             <form id="contactForm">
               <div class="form-group">
                 <label>Name *</label>
@@ -1018,7 +1017,6 @@
       </div>
     </section>
 
-    <!-- Normal Horizontal Cards - NO SWIPER -->
     <section class="media-section fade-in-up">
       <div class="container">
         <h2>Explore Our Work</h2>
@@ -1058,7 +1056,8 @@
   <div id="footer-placeholder"></div>
 
   <script>
-    // ==================== EXACT SAME METHOD AS GTWEBSTUDIO ====================
+    // ==================== SMART CROSS-PLATFORM MAIL HANDLER ====================
+    // Opens Gmail in browser on Windows Chrome, Apple Mail on Mac Safari
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       
@@ -1067,8 +1066,7 @@
       const formStatus = document.getElementById('formStatus');
       const originalText = btnText.innerHTML;
       
-      // Show loading state
-      btnText.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing email...';
+      btnText.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing...';
       submitBtn.disabled = true;
       
       // Get form data
@@ -1080,10 +1078,9 @@
       const source = document.getElementById('fromSource').value;
       const message = document.getElementById('fromMessage').value;
       
-      // Build mailto link with pre-filled content (EXACTLY like GTWEBSTUDIO)
-      const subject = encodeURIComponent('M.E. Contracting - New Estimate Request from ' + name);
-      const body = encodeURIComponent(
-        `M.E. CONTRACTING - FREE ESTIMATE REQUEST\n` +
+      // Build email content
+      const subject = `M.E. Contracting - New Estimate Request from ${name}`;
+      const body = `M.E. CONTRACTING - FREE ESTIMATE REQUEST\n` +
         `=========================================\n\n` +
         `CONTACT INFORMATION:\n` +
         `-------------------\n` +
@@ -1098,30 +1095,75 @@
         `Project Description:\n` +
         `${message}\n\n` +
         `=========================================\n` +
-        `This message was sent from the M.E. Contracting website contact form.`
-      );
+        `Sent from M.E. Contracting website.`;
       
-      // Create mailto link - THIS IS THE KEY LINE
-      const mailtoLink = `mailto:info@mecontracting.ca?subject=${subject}&body=${body}`;
+      const encodedSubject = encodeURIComponent(subject);
+      const encodedBody = encodeURIComponent(body);
+      const recipient = 'info@mecontracting.ca';
       
-      // Show success message
-      formStatus.className = 'form-status success';
-      formStatus.innerHTML = '<i class="fas fa-check-circle"></i> Opening your email client... Please click Send in your email app!';
+      // Detect browser and platform
+      const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+      const isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+      const isMac = /Macintosh|Mac OS X/i.test(navigator.userAgent);
+      const isWindows = /Windows/i.test(navigator.userAgent);
+      const isDesktop = !(/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent));
       
-      // Open email client after short delay (EXACTLY like GTWEBSTUDIO)
+      let urlToOpen;
+      
+      if (isDesktop) {
+        if (isChrome && isWindows) {
+          // Windows Chrome → Open Gmail in browser
+          urlToOpen = `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${recipient}&su=${encodedSubject}&body=${encodedBody}`;
+        } else if (isSafari && isMac) {
+          // Mac Safari → Use mailto (opens Apple Mail)
+          urlToOpen = `mailto:${recipient}?subject=${encodedSubject}&body=${encodedBody}`;
+        } else if (isChrome && isMac) {
+          // Mac Chrome → Can use Gmail compose URL
+          urlToOpen = `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${recipient}&su=${encodedSubject}&body=${encodedBody}`;
+        } else {
+          // All other browsers → Use mailto
+          urlToOpen = `mailto:${recipient}?subject=${encodedSubject}&body=${encodedBody}`;
+        }
+      } else {
+        // Mobile devices → mailto works best
+        urlToOpen = `mailto:${recipient}?subject=${encodedSubject}&body=${encodedBody}`;
+      }
+      
+      // Open the email client
+      window.location.href = urlToOpen;
+      
+      // Show fallback message after delay
       setTimeout(() => {
-        window.location.href = mailtoLink;
-        
-        // Reset form and button
+        if (document.getElementById('fromName').value !== '') {
+          formStatus.className = 'form-status success';
+          formStatus.innerHTML = `
+            <i class="fas fa-check-circle"></i> 
+            <strong>Ready to send!</strong><br>
+            If your email client didn't open, please manually email us at 
+            <strong>${recipient}</strong> with the details below.
+            <details style="margin-top: 15px; background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px;">
+              <summary style="cursor: pointer; font-weight: bold; color: #D4AF37;">Click to view email content</summary>
+              <pre style="margin-top: 12px; white-space: pre-wrap; word-wrap: break-word; background: #2a2c2d; padding: 10px; border-radius: 5px; font-family: monospace; color: #eee;">${body}</pre>
+              <button onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent)" style="margin-top: 10px; padding: 8px 16px; background: #D4AF37; color: #353738; border: none; border-radius: 20px; cursor: pointer; font-weight: bold;" type="button">
+                <i class="fas fa-copy"></i> Copy Content
+              </button>
+            </details>
+          `;
+          
+          btnText.innerHTML = originalText;
+          submitBtn.disabled = false;
+        }
+      }, 1500);
+      
+      // Reset form after delay
+      setTimeout(() => {
         document.getElementById('contactForm').reset();
         btnText.innerHTML = originalText;
         submitBtn.disabled = false;
-        
-        // Hide status after 5 seconds
-        setTimeout(() => {
+        if (!formStatus.innerHTML.includes('Ready to send')) {
           formStatus.className = 'form-status';
-        }, 5000);
-      }, 1000);
+        }
+      }, 3000);
     });
 
     // ==================== HEADER/FOOTER LOADING ====================
